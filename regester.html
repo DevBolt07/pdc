@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form</title>
+</head>
+<body style="background-color: #fff3c4; font-family: Arial, sans-serif;">
+  <header>
+    <h1><u>Registration Form:</u></h1>
+    <p><u>Register to Personality Development Club</u></p><br>
+    <nav style="margin-top: 15px;">
+      <a href="final.html">Home</a> |
+      <a href="members.html">Members</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="achieve.html">Achievements</a>
+    </nav><br>
+    <hr>
+  </header>
+
+  <main>
+    <form action="action.php" method="POST">
+
+      <!-- Personal Information -->
+      <fieldset style="border: 2px solid #333; padding: 20px; border-radius: 10px;">
+        <legend style="font-weight: bold; font-size: 1.2em;">Personal Information</legend>
+
+        <label><b>Enter your full name:</b></label><br>
+        <input type="text" name="first_name" placeholder="First name" required>
+        <input type="text" name="middle_name" placeholder="Middle name">
+        <input type="text" name="last_name" placeholder="Last name"><br><br>
+
+        <label><b>Enter your contact number:</b></label><br>
+        <input type="tel" name="contact" placeholder="+91-xxxxxxxxxx" required><br><br>
+
+        <label><b>Date of Birth:</b></label><br>
+        <input type="date" name="dob" required><br><br>
+
+        <label><b>Gender:</b></label><br>
+        <input type="radio" name="gender" value="male" required> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other<br><br>
+
+        <label><b>Blood Group:</b></label><br>
+        <input type="radio" name="blood_group" value="A+"> A+
+        <input type="radio" name="blood_group" value="A-"> A-
+        <input type="radio" name="blood_group" value="B+"> B+
+        <input type="radio" name="blood_group" value="B-"> B-
+        <input type="radio" name="blood_group" value="O+"> O+
+        <input type="radio" name="blood_group" value="O-"> O-
+        <input type="radio" name="blood_group" value="AB+"> AB+
+        <input type="radio" name="blood_group" value="AB-"> AB-<br><br>
+
+        <label><b>Aadhar Number:</b></label><br>
+        <input type="text" name="aadhar" placeholder="**** **** ****" required><br><br>
+
+        <label><b>Permanent Address:</b></label><br>
+        <input type="text" name="address" placeholder="Permanent Address" required><br><br>
+      </fieldset>
+      <br>
+
+      <!-- Academic Information -->
+      <fieldset style="border: 2px solid #333; padding: 20px; border-radius: 10px;">
+        <legend style="font-weight: bold; font-size: 1.2em;">Academic Information</legend>
+
+        <label><b>Year:</b></label><br>
+        <select name="year" required>
+          <option value="">--Select--</option>
+          <option value="FE">First Year (FE)</option>
+          <option value="SE">Second Year (SE)</option>
+          <option value="TE">Third Year (TE)</option>
+          <option value="BE">Final Year (BE)</option>
+        </select><br><br>
+
+        <label><b>Select Class:</b></label><br>
+        <select name="class" required>
+          <option value="">--Select--</option>
+          <option value="AIML">AIML</option>
+          <option value="AIDS">AIDS</option>
+          <option value="DS">DS</option>
+          <option value="AI">AI</option>
+        </select><br><br>
+
+        <label><b>Select Division:</b></label><br>
+        <input type="radio" name="division" value="A" required> A
+        <input type="radio" name="division" value="B"> B
+        <input type="radio" name="division" value="C"> C
+        <input type="radio" name="division" value="D"> D<br><br>
+
+        <label><b>PRN:</b></label><br>
+        <input type="text" name="prn" required><br><br>
+
+        <label><b>Roll Number:</b></label><br>
+        <input type="text" name="roll_number" required><br><br>
+
+        <label><b>10th Marksheet:</b></label>
+        <input type="file" name="marksheet_10" required><br><br>
+
+        <label><b>12th Marksheet:</b></label>
+        <input type="file" name="marksheet_12" required><br><br>
+      </fieldset>
+      <br>
+
+      <!-- Account Information -->
+      <fieldset style="border: 2px solid #333; padding: 20px; border-radius: 10px;">
+        <legend style="font-weight: bold; font-size: 1.2em;">Account Information</legend>
+
+        <label><b>Email ID:</b></label><br>
+        <input type="email" name="email" placeholder="Email ID" required><br><br>
+
+        <label><b>Create Password:</b></label><br>
+        <input type="password" name="password" placeholder="Password" required><br><br>
+
+        <label><b>Other Comments:</b></label><br>
+        <textarea name="feedback" placeholder="Your suggestions or feedback" rows="5" cols="40"></textarea><br><br>
+      </fieldset>
+      <br>
+
+      <input type="checkbox" name="terms" required>
+      <label><b>I agree to the terms and conditions.</b></label><br><br>
+
+      <input type="submit" value="Register">
+    </form>
+  </main>
+</body>
+</html>
