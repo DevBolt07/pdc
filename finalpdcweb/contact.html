@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - PDC VIT Pune</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom rounded mb-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="final.html">PDC</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="final.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="achieve.html">Achievements</a></li>
+            <li class="nav-item"><a class="nav-link" href="members.html">Members</a></li>
+            <li class="nav-item"><a class="nav-link" href="vission.html">Vision</a></li>
+            <li class="nav-item"><a class="nav-link" href="regester.html">Register</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-4">
+    <section class="mb-5 text-center">
+      <h2>Contact Us</h2>
+      <p class="mb-3">Have questions, suggestions, or want to collaborate? Reach out to us!</p>
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-6">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title mb-2">Personality Development Club, VIT Pune</h5>
+              <p class="mb-1"><i class="bi bi-envelope-fill text-warning"></i> <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">pdc@vit.edu</a></p>
+              <p class="mb-1"><i class="bi bi-telephone-fill text-warning"></i> +91-9876543210</p>
+              <p class="mb-1"><i class="bi bi-geo-alt-fill text-warning"></i> VIT Pune, 666, Upper Indira Nagar, Bibwewadi, Pune, Maharashtra 411037</p>
+              <div class="social-links mt-3">
+                <a href="https://www.instagram.com/pdclub.vitpune/" target="_blank" class="me-2" aria-label="Instagram"><i class="bi bi-instagram"></i> Instagram</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Alert -->
+    <div id="contactSuccess" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+      Thank you for contacting us! We will get back to you soon.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <section>
+      <h3 class="mb-3 text-center">Send Us a Message</h3>
+      <form class="needs-validation mx-auto p-4 border rounded bg-light" style="max-width: 600px;" novalidate>
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="name" name="name" required pattern="^[A-Za-z\s]+$" autocomplete="name">
+          <div class="invalid-feedback">Please enter your name (letters only).</div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Your Email <span class="text-danger">*</span></label>
+          <input type="email" class="form-control" id="email" name="email" required autocomplete="email">
+          <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label">Subject <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="subject" name="subject" required pattern=".{3,}">
+          <div class="invalid-feedback">Please enter a subject (at least 3 characters).</div>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+          <textarea class="form-control" id="message" name="message" rows="4" required minlength="10"></textarea>
+          <div class="invalid-feedback">Please enter your message (at least 10 characters).</div>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="consent" required>
+          <label class="form-check-label" for="consent">I agree to be contacted by PDC VIT Pune.</label>
+          <div class="invalid-feedback">You must agree before submitting.</div>
+        </div>
+        <button type="submit" class="btn btn-warning w-100">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Personality Development Club, VIT Pune</p>
+  </footer>
+
+  <!-- Bootstrap JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="effects.js"></script>
+  <script>
+    // Real-time Bootstrap validation for inputs
+    document.querySelectorAll('.form-control').forEach(function(input) {
+      input.addEventListener('input', function() {
+        if (input.checkValidity()) {
+          input.classList.remove('is-invalid');
+          input.classList.add('is-valid');
+        } else {
+          input.classList.remove('is-valid');
+          input.classList.add('is-invalid');
+        }
+      });
+    });
+
+    // Real-time validation for checkbox
+    var consent = document.getElementById('consent');
+    if (consent) {
+      consent.addEventListener('change', function() {
+        if (consent.checkValidity()) {
+          consent.classList.remove('is-invalid');
+          consent.classList.add('is-valid');
+        } else {
+          consent.classList.remove('is-valid');
+          consent.classList.add('is-invalid');
+        }
+      });
+    }
+
+    // Show alert on successful submit
+    (function () {
+      'use strict';
+      var form = document.querySelector('.needs-validation');
+      var alertBox = document.getElementById('contactSuccess');
+      if(form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          } else {
+            event.preventDefault();
+            alertBox.classList.remove('d-none');
+            form.reset();
+            form.classList.remove('was-validated');
+            // Remove green/red after reset
+            form.querySelectorAll('.form-control, .form-check-input').forEach(function(input){
+              input.classList.remove('is-valid', 'is-invalid');
+            });
+            setTimeout(function() {
+              alertBox.classList.add('d-none');
+            }, 4000);
+          }
+          form.classList.add('was-validated');
+        }, false);
+      }
+    })();
+
+    $(function() {
+  // Smooth scroll for anchor links
+  $('a[href^="#"]').on('click', function(e) {
+    var target = $($(this).attr('href'));
+    if(target.length) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop: target.offset().top - 70}, 600);
+    }
+  });
+
+  // Navbar shadow on scroll
+  $(window).on('scroll', function() {
+    if($(window).scrollTop() > 50) {
+      $('.navbar').addClass('scrolled');
+    } else {
+      $('.navbar').removeClass('scrolled');
+    }
+  });
+
+  // Form field highlight on focus
+  $('.form-control').on('focus', function() {
+    $(this).addClass('focus-highlight');
+  }).on('blur', function() {
+    $(this).removeClass('focus-highlight');
+  });
+
+  // Scroll-to-top button
+  if($('#scrollTopBtn').length === 0) {
+    $('body').append('<button id="scrollTopBtn" class="btn btn-warning" style="display:none;position:fixed;bottom:30px;right:30px;z-index:999;"><i class="bi bi-arrow-up"></i></button>');
+  }
+  $(window).on('scroll', function() {
+    if($(window).scrollTop() > 200) {
+      $('#scrollTopBtn').fadeIn();
+    } else {
+      $('#scrollTopBtn').fadeOut();
+    }
+  });
+  $('#scrollTopBtn').on('click', function() {
+    $('html, body').animate({scrollTop: 0}, 600);
+  });
+});
+  </script>
+</body>
+</html>

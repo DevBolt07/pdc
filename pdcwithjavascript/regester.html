@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <img src="club-logo.png" alt="Club Logo" class="logo" />
+    <h1>Registration Form</h1>
+    <p>Register to Personality Development Club</p>
+    <nav>
+      <a href="final.html">Home</a>
+      <a href="achieve.html">Achievements</a>
+      <a href="members.html">Members</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <form action="action.php" method="POST">
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label>Enter your full name:</label>
+        <div class="form-row">
+          <div class="form-group">
+            <input type="text" name="first_name" placeholder="First name" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="middle_name" placeholder="Middle name">
+          </div>
+          <div class="form-group">
+            <input type="text" name="last_name" placeholder="Last name">
+          </div>
+        </div>
+
+        <label>Enter your contact number:</label>
+        <input type="tel" name="contact" placeholder="+91-xxxxxxxxxx" required>
+
+        <label>Date of Birth:</label>
+        <input type="date" name="dob" required>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male" required> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+
+        <label>Blood Group:</label>
+        <input type="radio" name="blood_group" value="A+"> A+
+        <input type="radio" name="blood_group" value="A-"> A-
+        <input type="radio" name="blood_group" value="B+"> B+
+        <input type="radio" name="blood_group" value="B-"> B-
+        <input type="radio" name="blood_group" value="O+"> O+
+        <input type="radio" name="blood_group" value="O-"> O-
+        <input type="radio" name="blood_group" value="AB+"> AB+
+        <input type="radio" name="blood_group" value="AB-"> AB-
+
+        <label>Aadhar Number:</label>
+        <input type="text" name="aadhar" placeholder="**** **** ****" required>
+
+        <label>Permanent Address:</label>
+        <textarea name="address" rows="3" placeholder="Your address" required></textarea>
+      </fieldset>
+
+      <!-- Academic Information -->
+      <fieldset>
+        <legend>Academic Information</legend>
+
+        <label>Year:</label>
+        <select name="year" required>
+          <option value="">--Select--</option>
+          <option value="FE">First Year (FE)</option>
+          <option value="SE">Second Year (SE)</option>
+          <option value="TE">Third Year (TE)</option>
+          <option value="BE">Final Year (BE)</option>
+        </select>
+
+        <label>Select Class:</label>
+        <select name="class" required>
+          <option value="">--Select--</option>
+          <option value="AIML">AIML</option>
+          <option value="AIDS">AIDS</option>
+          <option value="DS">DS</option>
+          <option value="AI">AI</option>
+        </select>
+
+        <label>Select Division:</label>
+        <input type="radio" name="division" value="A" required> A
+        <input type="radio" name="division" value="B"> B
+        <input type="radio" name="division" value="C"> C
+        <input type="radio" name="division" value="D"> D
+
+        <label>PRN:</label>
+        <input type="text" name="prn" required>
+
+        <label>Roll Number:</label>
+        <input type="text" name="roll_number" required>
+      </fieldset>
+
+      <!-- Skills & Interests -->
+      <fieldset>
+        <legend>Skills & Interests</legend>
+
+        <label>Technical Skills:</label>
+        <textarea name="tech_skills" rows="3" placeholder="E.g., Python, HTML, Public Speaking, etc."></textarea>
+
+        <label>Areas of Interest:</label>
+        <input type="checkbox" name="interest[]" value="Public Speaking"> Public Speaking
+        <input type="checkbox" name="interest[]" value="Leadership"> Leadership
+        <input type="checkbox" name="interest[]" value="Event Management"> Event Management
+        <input type="checkbox" name="interest[]" value="Creativity"> Creativity
+        <input type="checkbox" name="interest[]" value="Team Building"> Team Building
+      </fieldset>
+
+      <!-- Past Participation -->
+      <fieldset>
+        <legend>Past Participation</legend>
+
+        <label>Have you participated in any other clubs?</label>
+        <input type="radio" name="other_clubs" value="yes"> Yes
+        <input type="radio" name="other_clubs" value="no"> No
+
+        <label>If yes, mention them:</label>
+        <input type="text" name="club_names" placeholder="E.g., Coding Club, Drama Club">
+
+        <label>Any leadership roles held:</label>
+        <input type="text" name="leadership" placeholder="E.g., Secretary, Team Leader">
+      </fieldset>
+
+      <!-- Emergency Contact -->
+      <fieldset>
+        <legend>Emergency Contact</legend>
+
+        <label>Name:</label>
+        <input type="text" name="emergency_name" required>
+
+        <label>Relation:</label>
+        <input type="text" name="emergency_relation" required>
+
+        <label>Contact Number:</label>
+        <input type="tel" name="emergency_contact" required>
+      </fieldset>
+
+      <!-- Social Media -->
+      <fieldset>
+        <legend>Social Media Profiles</legend>
+
+        <label>LinkedIn Profile:</label>
+        <input type="url" name="linkedin" placeholder="https://www.linkedin.com/in/your-profile">
+
+        <label>Instagram Handle:</label>
+        <input type="text" name="instagram" placeholder="@yourhandle">
+      </fieldset>
+
+      <!-- Consent -->
+      <fieldset>
+        <legend>Consent & Declaration</legend>
+
+        <input type="checkbox" name="terms" required>
+        <label>I hereby declare that all the information provided is true to the best of my knowledge.</label>
+
+        <input type="checkbox" name="newsletter">
+        <label>Subscribe to club newsletter and updates.</label>
+      </fieldset>
+
+      <input type="submit" value="Register">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Personality Development Club, VIT Pune</p>
+  </footer>
+</body>
+</html>

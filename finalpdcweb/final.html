@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personality Development Club - VIT Pune</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Bootstrap JS Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="effects.js"></script>
+  <script>
+  $(function() {
+    // Smooth scroll for anchor links
+    $('a[href^="#"]').on('click', function(e) {
+      var target = $($(this).attr('href'));
+      if(target.length) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: target.offset().top - 70}, 600);
+      }
+    });
+
+    // Navbar shadow on scroll
+    $(window).on('scroll', function() {
+      if($(window).scrollTop() > 50) {
+        $('.navbar').addClass('scrolled');
+      } else {
+        $('.navbar').removeClass('scrolled');
+      }
+    });
+
+    // Form field highlight on focus
+    $('.form-control').on('focus', function() {
+      $(this).addClass('focus-highlight');
+    }).on('blur', function() {
+      $(this).removeClass('focus-highlight');
+    });
+
+    // Scroll-to-top button
+    if($('#scrollTopBtn').length === 0) {
+      $('body').append('<button id="scrollTopBtn" class="btn btn-warning" style="display:none;position:fixed;bottom:30px;right:30px;z-index:999;"><i class="bi bi-arrow-up"></i></button>');
+    }
+    $(window).on('scroll', function() {
+      if($(window).scrollTop() > 200) {
+        $('#scrollTopBtn').fadeIn();
+      } else {
+        $('#scrollTopBtn').fadeOut();
+      }
+    });
+    $('#scrollTopBtn').on('click', function() {
+      $('html, body').animate({scrollTop: 0}, 600);
+    });
+  });
+  </script>
+  <script>
+  $(function() {
+  var text = "Empowering students to grow, lead, and inspire together.";
+  var i = 0;
+  function typeWriter() {
+    if (i < text.length) {
+      $('#typewriter').append(text.charAt(i));
+      i++;
+      setTimeout(typeWriter, 50);
+    }
+  }
+  typeWriter();
+});
+</script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="vitlogo.jpg" alt="VIT Logo" class="logo">
+      <h1>Personality Development Club</h1>
+      <p>VIT Pune</p>
+      <p id="typewriter" class="lead text-center mb-4"></p>
+      <!-- Bootstrap Navbar Start -->
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-custom rounded mb-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="final.html">PDC</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="achieve.html">Achievements</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="members.html">Members</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="vission.html">Vision</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="regester.html">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Bootstrap Navbar End -->
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <img src="vit_banner.png" alt="VIT Banner" class="banner-img">
+        <p class="text-center">VIT Pune is a prestigious institution known for its academic excellence. 
+        Explore our clubs, programs, and campus life!</p>
+      </section>
+
+      <section>
+        <h2 class="text-center">About the Club</h2>
+        <p>
+          We, the Members of Personality Development Club, work to develop our members' personalities 
+          by focusing on all three aspects: <span class="highlight">Character</span>, 
+          <span class="highlight">Competence</span>, and <span class="highlight">Culture</span>.
+        </p>
+        <p>
+          We refer to authentic resources like books and scientific articles to understand and apply 
+          physiological, philosophical, and cultural concepts.
+        </p>
+        <p>
+          Our team is committed to working together, helping each other, growing as a group, and 
+          contributing to society to the best of our abilities.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-center">Vision and Mission</h2>
+        <div class="pillar">
+          <h3>Character</h3>
+          <p>Character is defined by behavior, attitude, ethics, and personal qualities. 
+          It is the foundation of one's identity.</p>
+        </div>
+
+        <div class="pillar">
+          <h3>Competence</h3>
+          <p>Competence enables you to stand out in society. It includes knowledge, communication, 
+          talent, and skills.</p>
+        </div>
+
+        <div class="pillar">
+          <h3>Culture</h3>
+          <p>Your culture determines the values and boundaries in your life. It covers social behavior, 
+          beliefs, laws, customs, and traditions of human societies.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-center">Activities</h2>
+        <ul class="activities">
+          <li>Career guidance and workshops by eminent personalities.</li>
+          <li>Weekly sessions to develop leadership and communication skills.</li>
+          <li>Mentorship meets for bonding, doubt-solving, and goal alignment.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-center">Personality Development Club</h2>
+        <img src="pdc_logo.jpg" alt="PDC Logo" class="club-logo">
+        <p class="text-center">
+          Developing the Personality of students by focusing on all the 3 aspects of:
+        </p>
+        <div class="text-center mb-3">
+          <span class="highlight">Character</span> • 
+          <span class="highlight">Competence</span> • 
+          <span class="highlight">Culture</span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Personality Development Club, VIT Pune. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
